@@ -20,8 +20,7 @@ by Charles R. Severance
 Solution by Jamison Lahman, May 31, 2017
 """
 
-
-my_list = []                        # Initialize array
+my_list = []                       
 while True:
     number = 0.0
     input_number = input('Enter a number: ')
@@ -30,11 +29,12 @@ while True:
 
     try:
         number = float(input_number)
-    except ValueError:
+        my_list.append(input_number)
+    except: 
         print('Invalid input')
-        quit()
+        continue
 
-    my_list.append(input_number)
 
 print('Maximum: ', max(my_list))
 print('Minimum: ', min(my_list))
+
